@@ -10,6 +10,7 @@ const egresos = [
 
 
 let cargarApp = () => {
+    añadirEventos();
     cargarCabecero();
     cargarIngresos();
     cargarEgresos();
@@ -137,3 +138,15 @@ let agregarDato = () => {
         }
     }
 }
+
+function añadirEventos(){
+    document.querySelector(".agregar_btn").addEventListener("click",function(e){
+        e.preventDefault();
+        agregarDato();
+    });
+}
+
+window.onload = function() {
+    cargarApp();
+    
+};
